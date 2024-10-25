@@ -8,12 +8,200 @@
       name="description"
       content="Pet Naturals service. You can buy  the best pet supplement. Service created by Iryna Panchenko"
     />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
     <title>Pet Naturals</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    
   </head>
   <body>
-    <div class="date" id="dateNow"></div>
-    <script src="./js/index.js"></script>
+    <header class="header-wrapper container">
+      <a class="logo link" href="./index.html"
+        ><img class="logo-img" src="./images/header_logo 1.webp" alt="logo"
+      /></a>
+
+      <nav>
+        <ul class="menu-list">
+          <li class="menu-link"><a href="#order">ORDER</a></li>
+          <li class="menu-link"><a href="#about">ABOUT</a></li>
+          <li class="menu-link"><a href="#results">RESULTS</a></li>
+        </ul>
+
+        <!--  ======  BURGER BUTTON  ========= -->
+        <button
+          type="button"
+          class="header-mobile-menu-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="header-mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-burger-1"></use>
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="order-section" id="order">
+        <div class="container">
+          <h1>Pet Naturals of Vermont, Calming, For Cats</h1>
+          <div class="order-block">
+            <div class="description">
+              <h3>Your cat deserves the best pet supplement the world has to offer. 
+That's what's in the package. /h2>
+              <ul>
+                <li><img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+              height="24"><p>Features a patented calming blend</p></li>
+                <li><img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+              height="24"><p>Doesn’t contain herbal ingredients</p></li>
+                <li><img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+              height="24"><p>Helps manage everyday stress</p></li>
+              </ul>
+            </div>
+            <div class="product-images">
+               <img
+                srcset="./images/order_section/cat_left@2x.webp 2x"
+                class="product-image"
+                src="./images/order_section/cat_left.webp"
+                alt="Cat"
+                width="320"
+                height="390"
+              />
+               <img
+                srcset="./images/order_section/product@2x.webp 2x"
+                class="product-image"
+                src="./images/order_section/product.webp"
+                alt="Supplement"
+                width="388"
+                height="388"
+              />
+              <img
+                srcset="./images/order_section/cat_right@2x.webp 2x"
+                class="product-image"
+                src="./images/order_section/cat_right.webp"
+                alt="Cat"
+                width="320"
+                height="390"
+              />
+
+            </div>
+            <form 
+            action="#"
+            method="POST" 
+            class="order-form">
+                <h3>TIME LEFT</h3>
+                <p id="timer">02:00:00</p>
+                <div class="price">
+                    <p class="old-price">120uah</p>
+                    <p class="new-price">60uah</p>
+                </div>
+                <div class="backdrop-modal-form-wrapper">
+          <label class="backdrop-modal-form-userdata" for="user-name">
+            <span class="backdrop-modal-form-input-desc">Name</span>
+          </label>
+          <div class="backdrop-modal-form-input-wrapper">
+            <img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+              height="24">
+            <input
+              class="backdrop-modal-form-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+              required
+              pattern="^[a-zA-Z]+$"
+              minlength="2"
+            />
+            
+          </div>
+        </div>
+        <div class="backdrop-modal-form-wrapper">
+          <label class="backdrop-modal-form-userdata" for="user-phone-number">
+            <span class="backdrop-modal-form-input-desc">Phone</span>
+          </label>
+          <div class="backdrop-modal-form-input-wrapper">
+            <img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+              height="24">
+            <input
+              class="backdrop-modal-form-input"
+              type="tel"
+              name="user-phone-number"
+              id="user-phone-number"
+              required
+              pattern="[0-9]{10}"
+              placeholder="+38(0__)___-__-__"
+
+             />
+           
+          </div>
+        </div>
+        <button type="submit">ORDER</button>
+        <div class="backdrop-modal-form-wrapper">
+                <p class="date" id="dateNow"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="about-section" id="about">
+        <div class="container">
+        <h2>From the manufacturer</h2>
+        <ul class="description-list">
+            <li><img
+                srcset="./images/about_section/cat_sleeping@2x.webp 2x"
+                class="product-image"
+                src="./images/about_section/cat_sleeping.webp"
+                alt="Cat sleeping"
+                width="212"
+                height="212"
+              />
+            <h3>Keep Calm and Carry On</h3>
+        <p>Are you searching for a better way to ease your pet’s separation anxiety or stress? Calming chews help relieve
+pet stress without corn, wheat or artificial ingredients. </p>
+</li>
+            <li><img
+                srcset="./images/about_section/flower@2x.webp 2x"
+                class="product-image"
+                src="./images/about_section/flower.webp"
+                alt="Flower icon"
+                width="164"
+                height="164"
+              /> <h3>Peace of Mind</h3>
+              <p>Pet Naturals of Vermont’s research-backed formula makes it safe to double or triple the amount in times of added stress.  </p>
+            </li>
+            <li><img
+                srcset="./images/about_section/treat@2x.webp 2x"
+                class="product-image"
+                src="./images/about_section/treat.webp"
+                alt="Pieces of treat"
+                width="186"
+                height="186"
+              /> <h3>More than a Tasty Treat</h3>
+              <p>Don’t let its satisfying chicken liver flavor fool you. Technically, Calming isn’t a treat but it sure tastes like one. Reward your best buddy with a Calming chew. </p></li>
+        </ul>
+    </div>  
+    </section>
+      <section class="results-section" id="results">
+        <div class="container">
+        <h2>Best Uses for Calming Chews</h2>
+        <div class="result-description">
+            <p>Car rides. Vet visits. Thunderstorms. Boarding. Parties. These are just a handful of times when Calming chews may come in handy. Does your dog hate to be left home alone? Does your cat love hiding under the bed? Serve up a Calming chew to help soothe your furry pal’s anxiety and make your life easier, too!
+               </p>
+                <p>For Best Results:</p>
+                <p> We recommend administering Calming chews 30 minutes prior to a stressful event. The 30-minute activation period gives you a chance to increase dosage if you’re not seeing expected results. Calming is safe for unique stress inducing events and for long-term use to help manage everyday stress.</p>
+        </div>
+        <div class="result-img">
+            <img
+                srcset="./images/result_section/pet@2x.webp 2x"
+                class="product-image"
+                src="./images/result_section/pet.webp"
+                alt="The vet examines a cat"
+                width="186"
+                height="186"
+              />
+        </div>
+    </div>
+      </section>
+    </main>
+   
+
+    <script type="module" src="./js/index.js"></script>
+
   </body>
 </html>
