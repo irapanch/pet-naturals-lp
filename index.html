@@ -10,6 +10,13 @@
     />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <title>Pet Naturals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+  />
     <link rel="stylesheet" href="./css/styles.css" />
     
   </head>
@@ -29,7 +36,7 @@
         <!--  ======  BURGER BUTTON  ========= -->
         <button
           type="button"
-          class="header-mobile-menu-btn js-open-menu"
+          class="header-mobile-menu-btn "
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
@@ -40,14 +47,14 @@
       </nav>
     </header>
     <main>
-      <section class="order-section" id="order">
-        <div class="container">
+      <section class="order-section" >
+        <div class="container order-container ">
           <h1>Pet Naturals of Vermont, Calming, For Cats</h1>
           <div class="order-block">
             <div class="description">
               <h3>Your cat deserves the best pet supplement the world has to offer. 
-That's what's in the package. /h2>
-              <ul>
+That's what's in the package. </h3>
+              <ul class="advantages">
                 <li><img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
               height="24"><p>Features a patented calming blend</p></li>
                 <li><img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
@@ -56,10 +63,10 @@ That's what's in the package. /h2>
               height="24"><p>Helps manage everyday stress</p></li>
               </ul>
             </div>
-            <div class="product-images">
+            <div class="product-images ">
                <img
                 srcset="./images/order_section/cat_left@2x.webp 2x"
-                class="product-image"
+                class="product-image cat_left"
                 src="./images/order_section/cat_left.webp"
                 alt="Cat"
                 width="320"
@@ -67,7 +74,7 @@ That's what's in the package. /h2>
               />
                <img
                 srcset="./images/order_section/product@2x.webp 2x"
-                class="product-image"
+                class="product-image product"
                 src="./images/order_section/product.webp"
                 alt="Supplement"
                 width="388"
@@ -75,7 +82,7 @@ That's what's in the package. /h2>
               />
               <img
                 srcset="./images/order_section/cat_right@2x.webp 2x"
-                class="product-image"
+                class="product-image cat_right"
                 src="./images/order_section/cat_right.webp"
                 alt="Cat"
                 width="320"
@@ -84,21 +91,22 @@ That's what's in the package. /h2>
 
             </div>
             <form 
+            id="order"
             action="#"
             method="POST" 
             class="order-form">
-                <h3>TIME LEFT</h3>
-                <p id="timer">02:00:00</p>
+                <h3 class="form-title">TIME LEFT</h3>
+                <p id="timer" class="form-timer">02:00:00</p>
                 <div class="price">
                     <p class="old-price">120uah</p>
                     <p class="new-price">60uah</p>
                 </div>
                 <div class="backdrop-modal-form-wrapper">
           <label class="backdrop-modal-form-userdata" for="user-name">
-            <span class="backdrop-modal-form-input-desc">Name</span>
+            
           </label>
           <div class="backdrop-modal-form-input-wrapper">
-            <img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+            <img class="backdrop-modal-form-input-icon" src="./images/order_section/cat_paw_light.webp" alt="Cat paws" width="24"
               height="24">
             <input
               class="backdrop-modal-form-input"
@@ -106,6 +114,7 @@ That's what's in the package. /h2>
               name="user-name"
               id="user-name"
               required
+              placeholder="Name"
               pattern="^[a-zA-Z]+$"
               minlength="2"
             />
@@ -114,10 +123,10 @@ That's what's in the package. /h2>
         </div>
         <div class="backdrop-modal-form-wrapper">
           <label class="backdrop-modal-form-userdata" for="user-phone-number">
-            <span class="backdrop-modal-form-input-desc">Phone</span>
+            
           </label>
           <div class="backdrop-modal-form-input-wrapper">
-            <img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+            <img class="backdrop-modal-form-input-icon" src="./images/order_section/cat_paw_light.webp" alt="Cat paws" width="24"
               height="24">
             <input
               class="backdrop-modal-form-input"
@@ -125,61 +134,76 @@ That's what's in the package. /h2>
               name="user-phone-number"
               id="user-phone-number"
               required
-              pattern="[0-9]{10}"
               placeholder="+38(0__)___-__-__"
-
-             />
-           
+             />        
           </div>
         </div>
-        <button type="submit">ORDER</button>
+        <button class="order-btn" type="submit">ORDER</button>
         <div class="backdrop-modal-form-wrapper">
-                <p class="date" id="dateNow"></p>
+                <p class="date" >Order date: <span id="dateNow"></span></p>
             </form>
           </div>
         </div>
       </section>
       <section class="about-section" id="about">
-        <div class="container">
+        <div class="container about-container">
         <h2>From the manufacturer</h2>
         <ul class="description-list">
-            <li><img
+            <li class="description-item"><img
                 srcset="./images/about_section/cat_sleeping@2x.webp 2x"
-                class="product-image"
+                class="card-image"
                 src="./images/about_section/cat_sleeping.webp"
                 alt="Cat sleeping"
                 width="212"
                 height="212"
               />
+              <div class="desc-wrap">
             <h3>Keep Calm and Carry On</h3>
         <p>Are you searching for a better way to ease your pet’s separation anxiety or stress? Calming chews help relieve
-pet stress without corn, wheat or artificial ingredients. </p>
+pet stress without corn, wheat or artificial ingredients. </p></div>
 </li>
-            <li><img
+            <li class="description-item"><img
                 srcset="./images/about_section/flower@2x.webp 2x"
-                class="product-image"
+                class="card-image"
                 src="./images/about_section/flower.webp"
                 alt="Flower icon"
                 width="164"
                 height="164"
-              /> <h3>Peace of Mind</h3>
+              />
+              <div class="desc-wrap">
+              <h3>Peace of Mind</h3>
               <p>Pet Naturals of Vermont’s research-backed formula makes it safe to double or triple the amount in times of added stress.  </p>
+            </div>
             </li>
-            <li><img
+            <li class="description-item"><img
                 srcset="./images/about_section/treat@2x.webp 2x"
-                class="product-image"
+                class="card-image"
                 src="./images/about_section/treat.webp"
                 alt="Pieces of treat"
                 width="186"
                 height="186"
-              /> <h3>More than a Tasty Treat</h3>
-              <p>Don’t let its satisfying chicken liver flavor fool you. Technically, Calming isn’t a treat but it sure tastes like one. Reward your best buddy with a Calming chew. </p></li>
+              /> 
+              <div class="desc-wrap">
+              <h3>More than a Tasty Treat</h3>
+              <p>Don’t let its satisfying chicken liver flavor fool you. Technically, Calming isn’t a treat but it sure tastes like one. Reward your best buddy with a Calming chew. </p>
+            </div>
+            </li>
         </ul>
     </div>  
     </section>
       <section class="results-section" id="results">
-        <div class="container">
+        <div class="container results-container">
         <h2>Best Uses for Calming Chews</h2>
+        <div class="image-container">
+          <img
+                srcset="./images/result_section/rectangle-results@2x.webp 2x"
+                class="results-icon"
+                src="./images/result_section/rectangle-results.webp"
+                alt="The border"
+                width="760"
+                height="354"
+              />
+        </div>
         <div class="result-description">
             <p>Car rides. Vet visits. Thunderstorms. Boarding. Parties. These are just a handful of times when Calming chews may come in handy. Does your dog hate to be left home alone? Does your cat love hiding under the bed? Serve up a Calming chew to help soothe your furry pal’s anxiety and make your life easier, too!
                </p>
@@ -189,7 +213,7 @@ pet stress without corn, wheat or artificial ingredients. </p>
         <div class="result-img">
             <img
                 srcset="./images/result_section/pet@2x.webp 2x"
-                class="product-image"
+                class="result-image"
                 src="./images/result_section/pet.webp"
                 alt="The vet examines a cat"
                 width="186"
@@ -199,8 +223,45 @@ pet stress without corn, wheat or artificial ingredients. </p>
     </div>
       </section>
     </main>
-   
+   <!-- =========  mobile MODAL  ============ -->
 
+   <div class="mobile-menu-section" >
+    <div class=" container">
+      <button
+        type="button"
+        class="btn-close js-close-mobile-menu"
+      >
+        X
+      </button>
+      <div class="mobile-menu-wrapper">
+        <ul class="mobile-menu-list advantages ">
+          <li class="js-close-mobile-menu">
+            <img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+              height="24">
+            <a class="link" href="#order"
+              >ORDER</a
+            >
+          </li>
+          <li class="js-close-mobile-menu">
+            <img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+              height="24">
+            <a class="link" href="#about">ABOUT</a>
+          </li>
+          <li class="js-close-mobile-menu">
+            <img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
+              height="24">
+            <a class="link" href="#results"
+              >RESULTS</a
+            >
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+  <button id="toTopBtn" class="order-btn">UP</button>
+    <script type="module" src="https://unpkg.com/imask"></script>
     <script type="module" src="./js/index.js"></script>
 
   </body>
