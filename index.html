@@ -21,9 +21,10 @@
     
   </head>
   <body>
+    <!-- == HEADER == -->
     <header class="header-wrapper container">
       <a class="logo link" href="./index.html"
-        ><img class="logo-img" src="./images/header_logo 1.webp" alt="logo"
+        ><img class="logo-img" src="./images/header_logo.webp" alt="logo"
       /></a>
 
       <nav>
@@ -47,6 +48,7 @@
       </nav>
     </header>
     <main>
+      <!-- ==== ORDER === -->
       <section class="order-section" >
         <div class="container order-container ">
           <h1>Pet Naturals of Vermont, Calming, For Cats</h1>
@@ -66,7 +68,7 @@ That's what's in the package. </h3>
             <div class="product-images ">
                <img
                 srcset="./images/order_section/cat_left@2x.webp 2x"
-                class="product-image cat_left"
+                class=" cat_left"
                 src="./images/order_section/cat_left.webp"
                 alt="Cat"
                 width="320"
@@ -74,7 +76,7 @@ That's what's in the package. </h3>
               />
                <img
                 srcset="./images/order_section/product@2x.webp 2x"
-                class="product-image product"
+                class=" product"
                 src="./images/order_section/product.webp"
                 alt="Supplement"
                 width="388"
@@ -82,7 +84,7 @@ That's what's in the package. </h3>
               />
               <img
                 srcset="./images/order_section/cat_right@2x.webp 2x"
-                class="product-image cat_right"
+                class=" cat_right"
                 src="./images/order_section/cat_right.webp"
                 alt="Cat"
                 width="320"
@@ -92,8 +94,8 @@ That's what's in the package. </h3>
             </div>
             <form 
             id="order"
-            action="#"
-            method="POST" 
+            action="./index.html"
+            method="GET" 
             class="order-form">
                 <h3 class="form-title">TIME LEFT</h3>
                 <p id="timer" class="form-timer">02:00:00</p>
@@ -141,10 +143,12 @@ That's what's in the package. </h3>
         <button class="order-btn" type="submit">ORDER</button>
         <div class="backdrop-modal-form-wrapper">
                 <p class="date" >Order date: <span id="dateNow"></span></p>
+                </div>
             </form>
           </div>
         </div>
       </section>
+      <!-- ==== ABOUT ==== -->
       <section class="about-section" id="about">
         <div class="container about-container">
         <h2>From the manufacturer</h2>
@@ -191,9 +195,11 @@ pet stress without corn, wheat or artificial ingredients. </p></div>
         </ul>
     </div>  
     </section>
+    <!-- ==== RESULT ==== -->
       <section class="results-section" id="results">
         <div class="container results-container">
         <h2>Best Uses for Calming Chews</h2>
+        <div class="result-wrapper">
         <div class="image-container">
           <img
                 srcset="./images/result_section/rectangle-results@2x.webp 2x"
@@ -220,6 +226,7 @@ pet stress without corn, wheat or artificial ingredients. </p></div>
                 height="186"
               />
         </div>
+      </div>
     </div>
       </section>
     </main>
@@ -233,7 +240,7 @@ pet stress without corn, wheat or artificial ingredients. </p></div>
       >
         X
       </button>
-      <div class="mobile-menu-wrapper">
+      <nav class="mobile-menu-wrapper">
         <ul class="mobile-menu-list advantages ">
           <li class="js-close-mobile-menu">
             <img src="./images/order_section/cat_paws.webp" alt="Cat paws" width="18"
@@ -257,7 +264,7 @@ pet stress without corn, wheat or artificial ingredients. </p></div>
           
         </ul>
         
-      </div>
+      </nav>
     </div>
   </div>
   <button id="toTopBtn" class="order-btn">UP</button>
